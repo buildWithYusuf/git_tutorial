@@ -71,3 +71,12 @@ File creation and management
 Staging and committing changes
 Branching and viewing commit history
 Global configuration
+
+*to check the remote origin in local
+git remote -v
+*To add the origin from github in local git 
+
+git remote set-url origin ssh-url
+
+This is the day one git journey
+---Ends Here---
