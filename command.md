@@ -1,82 +1,60 @@
-Git Command History
-1. Initialization
-Create a new directory: Creates a directory for your project.
-Command: mkdir git_tutorial
-Navigate to the directory: Changes the current working directory.
-Command: cd git_tutorial/
-Initialize a Git repository: Initializes an empty Git repository in the directory.
-Command: git init
-2. File Operations
-List files: Displays the contents of the current directory.
-Command: ls
-Check the current path: Prints the current working directory.
-Command: pwd
-Create a new file: Opens or creates a new file for editing.
-Command: vi hello.txt
-Create additional files: Creates multiple files.
-Command: touch nibba.tx nibbi.txt
-Remove a file: Deletes a file from the directory.
-Command: rm hello.txt
-3. Viewing Status
-Check repository status: Displays the current status of your working directory, showing tracked and untracked files.
-Command: git status
-4. Staging and Committing Files
-Stage a file for commit: Adds specific files to the staging area.
+Set global username and email for Git (Locally).
 
-Command: git add nibbi.txt
-Stage multiple files for commit: Adds multiple files to the staging area.
+git config --global user.name "<your username>"
+git config --global user.email "<your email>"
+Initialise an empty Git Repository
 
-Command: git add nibba.txt nibba.tx
-Commit staged changes: Records the staged changes in the repository with a commit message.
+git init
+Clone an existing Git Repository
 
-Command: git commit -m "adding nibba nibbi"
-Stage and commit all changes: Stages all modified files and commits them.
+git clone <repository URL>
+Add file/stage to git
 
-Command: git add . followed by git commit -m "babusona"
-5. Removing and Restoring Files
-Remove a file: Deletes a file from the directory.
-Command: rm nibbi.txt
-Restore a file: Restores a deleted or modified file from the repository.
-Command: git restore nibbi.txt
-6. Configuration
-Set global Git username: Configures your Git username globally for all repositories.
-Command: git config --global user.name "buildWithYusuf"
-Set global Git email: Configures your Git email globally for all repositories.
-Command: git config --global user.email "devopsinterviews789@gmail.com"
-7. Branching
-Create a new branch: Creates a new branch and switches to it.
-Command: git checkout -b dev
-Check branches: Lists all branches in the repository and shows the current active branch.
-Command: git branch
-Switch to another branch: Switches to an existing branch.
-Command: git checkout master
-8. Viewing Commit History
-View commit log: Displays the commit history.
-Command: git log
-View condensed commit log: Displays a one-line summary of the commit history.
-Command: git log --oneline
-9. Branching and Merging
-Create and switch to a new branch: Creates a new branch and switches to it.
-Command: git checkout -b dev2
-Switch between branches: Changes the active branch.
-Command: git checkout dev2
-10. Additional Commands
-Clear the terminal: Clears the terminal screen.
-Command: clear
-Summary
-This document provides an overview of essential Git commands, including:
+git add <filename>
+Add all the files to git
 
-Repository initialization
-File creation and management
-Staging and committing changes
-Branching and viewing commit history
-Global configuration
+git add .
+Commit all the staged files to git
 
-*to check the remote origin in local
+git commit -m "<your commit message>"
+Restore the file from being modified to Tracked
+
+git restore <filename>
+git checkout <filename>
+Show the status of your Git respository
+
+git status
+Show the branches of your git repository
+
+git branch
+Checkout to a new branch
+
+git checkout -b <branch name>
+Checkout to an existing branch
+
+git checkout <branch name>
+Remove a branch from Git
+
+git branch -d <branch name>
+Show remote origin URL
+
 git remote -v
-*To add the origin from github in local git 
+Add remote origin URL
 
-git remote set-url origin ssh-url
+git remote add origin <your remote git URL>
+Remove remote origin URL
 
-This is the day one git journey
----Ends Here---
+git remote remove origin 
+Fetch all the remote branches
+
+git fetch
+Push your local changes to remote branch
+
+git push origin <branch name>
+Pull your remote changes to local branch
+
+git pull origin <branch name>
+Check you git commits and logs
+
+git log
+Happy Learning!
